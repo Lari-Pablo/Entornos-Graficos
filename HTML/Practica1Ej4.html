@@ -1,0 +1,85 @@
+<html>
+    <head>
+       <title> Ejercicio 4 - Práctica 1 </title> 
+    </head>
+    <body>
+        <div>
+            <a href = "https://www.frro.utn.edu.ar/">
+            <img src = "LogoUTN.png" alt = "Logo de la UTN" height="70" width="70"/>
+            </a>
+            <br />
+            <hr size = "3" color = "black"> 
+        </div>
+        <div>
+            <h1><FONT SIZE ="5">AÑO 2008 </FONT></h1>
+            <table style = "border-collapse: collapse; width: 35%;">
+                <tr>
+                    <th colspan="2" class = "titulo">Exámenes</th>
+                    </tr>
+                <tr>
+                    <td rowspan ="2"style="width: 200px;">Fecha: 23/04/2026</td>
+                    <td class = "derecha">Aprobados</td>
+                </tr>    
+                <tr>
+                    <td class = "derecha">24/30</td>
+                </tr>
+            </table>
+            <style>
+            td,th
+            {
+                border: 1px solid black;
+            }
+            .derecha{
+                text-align: right;
+            }
+            .titulo{
+                text-align: center;
+            }
+            .sinbordes td, .sinbordes th{
+                border: none !important;
+            }    
+            </style>
+        </div>
+        <div>
+            <ol>
+                <li> <a href = "#Enunciado">Enunciado del exámen</a></li>
+                <li> <a href = "resolucion.html" target = "_blank">Resolución</a></li>
+            </ol>
+            <br />
+        </div>
+        <div>
+           <p>Puede realizar consultas completando el siguiente formulario:</p>
+           
+            <form action="mailto:x@x.com" method="post">
+                
+                <table class = "sinbordes">
+                    <tr>
+                        <td><b>email:</b></td>
+                        <td> <input type="email" id="emailusuario" required></td>
+                        </tr>
+                    <tr>
+                        <td valign ="top"><b>consulta:</b></td>
+                        <td><input type = "text" id = "consultausuario" style = "width: 170px; height: 70px;"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="ENVIAR">
+                            <input type="reset" value="BORRAR">
+                        </td>
+                    </tr>
+                </table>
+                <br />
+            </form>
+        </div>
+        <div>
+            <h2 id = "Enunciado"><FONT size= "4">Enunciado del exámen</FONT></h2>
+            <p>Ejercicio 1: ...................................<br>
+                .......................................................</p>
+            <p>Ejercicio 2: ...................................<br>
+                .......................................................</p></p>
+        </div>
+        <br />
+        Para más información dirigirse a <a href ="mailto:contacto@xx.com">contacto@xx.com</a>
+    </body>
+</html>
