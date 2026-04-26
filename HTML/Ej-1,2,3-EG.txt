@@ -1,0 +1,491 @@
+Ejercicios HTML - Práctica 1:
+
+Ejercitación 1:
+1) Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
+
+HTML (HyperText Markup Language) es un lenguaje de marcado para la elaboración de páginas web, es un estándar a cargo del W3C que se ha impuesto en la visualización de páginas web y el cual todos los navegadores han adoptado.
+Fue desarrollado durante los años 90 por Tim Berners-Lee. Las versiones de HTML iniciaron con HTML 1.0 (1991), seguido de las versiones 2.0 (1995), 3.2 (1997), 4.0/4.01 (1997 - 1999), XHTML (2000) y finalmente la versión actual: HTML 5 (2014).
+
+2) ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos
+con HTML?
+
+Los principios básicos que recomienda el W3C para la creación de documentos con HTML son:
+* Separar estructura y presentación: La experiencia ha demostrado que separando la estructura de un documento de sus aspectos presentacionales se reduce el coste de servir a un amplio espectro de plataformas, medios, etc. y se facilitan las revisiones del documento.
+* Considerar la accesibilidad universal a la Web: Para hacer la Web más accesible a todos, en especial a aquéllos con discapacidades, los autores deberían considerar cómo pueden representarse sus documentos en diferentes plataformas: navegadores basados en voz, lectores braille, etc.
+* Ayudar a los agentes de usuario con la representación incremental: Mediante un diseño cuidadoso de las tablas y haciendo uso de las nuevas características de las tablas de HTML 4, los autores pueden ayudar a los agentes de usuario a representar los documentos más rápidamente.
+
+3) En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y
+obsoleto?
+* Un elemento o atributo desaprobado es aquel que ha quedado anticuado por la presencia de estructuras nuevas. Se definen en el manual de referencia en los lugares apropiados, pero marcados como desaprobados.
+* Un elemento o atributo obsoleto es aquél para el cual no hay garantía de soporte por parte de un agente de usuario. Estos elementos han dejado de estar definidos en la especificación, pero se enumeran por motivos históricos en la sección de cambios del manual de referencia.
+
+4) Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+* El DTD (Definición de Tipo de Documento) SGML declara tipos de elementos que representan estructuras o un comportamiento deseado. HTML incluye elementos que representan párrafos, vínculos de hipertexto, listas, tablas, imágenes, etc.
+* HTML 4.01 especifica tres DTDs, de modo que los autores deben incluir una de las siguientes declaraciones del tipo de documento en sus documentos. Los DTDs varían en cuanto a los elementos que soportan. Los 3 DTDs son: 
+   - DTD HTML 4.01 Estricto (Strict DTD): incluye todos los elementos y atributos que no han sido desaprobados o que no aparecen en documentos con marcos.
+   - El DTD HTML 4.01 Transicional (Transitional DTD): incluye todo lo que incluye el DTD estricto más los elementos y atributos desaprobados.
+   - DTD HTML 4.01 para Documentos con Marcos (Frameset DTD): incluye todo lo que incluye el DTD Transicional más los marcos.
+
+5) Qué son los metadatos y cómo se especifican en HTML?
+Los metadatos en HTML son información sobre el documento. Estos datos se ubican en la sección <head> y no se suelen mostrar visualmente en la página, sino que el navegador los lee para conocer información relevante y utilizarlos en situaciones específicas.
+
+
+Ejercitación 2:
+
+2.a) 
+Sección: Cualquier parte del documento HTML. 
+Efecto: Es un comentario, es visible para el programador en el código pero no se muestra en la página. Se utiliza para añadir notas, organizar el código y documentar el proyecto.
+Obligatorio: NO
+
+2.b)
+Sección: Se coloca en el <body>.
+Efecto: Crea un bloque contenedor que permite agrupar contenido.
+Elementos y etiquetas:
+ 
+ - Elemento: div
+ - Etiquetas: <div> , </div>
+ - Contenido: "Contenido del bloque1"
+
+Atributo: Nombre: id - Valor: "bloque1"
+Obligatorio: NO
+
+2.c)
+Sección: Se coloca en el <body>.
+Efecto: Se muestra una imagen en la página.
+Elementos y etiquetas: 
+
+ - Elemento: img
+ - Etiquetas: (elemento vacio, no tiene etiqueta de cierre)
+
+Atributos:
+
+ - src="" (Ruta de la imagen)
+   Obligatorio: SI
+
+ - alt="lugar imagen" (texto alternativo si la imagen no carga)
+   Obligatorio: SI para la accesibilidad.
+
+ - id="im1" (identificador)
+   Obligatorio: NO
+
+ - name="im1" (identificador)
+   Obligatorio: NO
+
+ - width="32" (ancho de la imagen)
+   Obligatorio: NO
+
+ - height="32" (alto de la imagen)
+   Obligatorio: NO
+
+ - longdesc="detalles.htm" (URL con una descripción larga de la imagen)
+   Obligatorio: NO
+
+2.d)
+Sección: Se coloca en el <head>
+Efecto: define metadatos (información sobre datos), no se visualiza en la página pero es útil para buscadores, navegadores y redes sociales.
+Elementos y etiquetas: 
+
+ - Elemento: meta
+ - Etiquetas: (elemento vacio, no tiene etiqueta de cierre)
+
+Atributos:
+
+ - name="keywords" (define el tipo de metadato: palabras clave)
+   Obligatorio: NO
+
+ - lang="es"(indica el idioma del contenido)
+   Obligatorio: NO
+
+ - content="casa, compra, venta, alquiler " (valor de la metainformación)
+   Obligatorio: Sólo si se usa name o http-equiv
+
+ - http-equiv="expires" (indica al navegador cuándo expira la página en caché)
+   Obligatorio: NO
+
+2.e)
+Sección: Se coloca en el <body>
+Efecto: Permite crear un enlace hacia otra página (en este caso)
+Elementos y etiquetas: 
+
+ - Elemento: a
+ - Etiquetas: <a>, </a>
+ - Contenido: "Resumen HTML"
+
+Atributos:
+
+ - href="http://www.e-style.com.ar/resumen.html" (URL de destino)
+   Obligatorio: SI
+
+ - type="text/html" (tipo de documento)
+   Obligatorio: NO
+
+ - hreflang="es" (idioma de destino)
+   Obligatorio: NO
+
+ - charset="utf-8" (codificación de caracteres del destino)
+   Obligatorio: NO
+
+ - rel="help" (relación entre el documento actual y el destino)
+   Obligatorio: NO 
+
+2.f)
+Sección: Se coloca en el <body>
+Efecto: Crea una tabla de datos de 3 columnas (A, B, C) y 2 filas (1°, 2°). Además tiene un título arriba.
+Elementos y etiquetas: 
+
+ - Elemento: table
+ - Etiquetas: <table>, </table>
+
+Atributos:
+
+ - width="200" (ancho de la tabla)
+   Obligatorio: NO
+
+ - summary="Datos correspondientes al ejercicio vencido" (Descripción de la tabla)
+   Obligatorio: NO.
+--------------------------------------------------------------------------------------
+ - Elemento: caption (título)
+ - Etiquetas: <caption>, </caption>
+
+Atributos:
+
+ - align="top"(posición del título)
+   Obligatorio: NO
+--------------------------------------------------------------------------------------
+ - Elemento: tr (define fila)
+ - Etiquetas: <tr>, </tr>
+--------------------------------------------------------------------------------------
+ - Elemento: th (celda de encabezado)
+ - Etiquetas: <th>, </th>
+
+Atributos:
+
+ - scope="col" (indica que la celda de cabecera se refiere a una columna)
+   Obligatorio: NO
+
+ - scope="row" (indica que la celda de cabecera se refiere a una fila)
+   Obligatorio: NO.
+-------------------------------------------------------------------------------------
+ - Elemento: td (celda común de datos)
+ - Etiquetas: <td>, </td>
+-------------------------------------------------------------------------------------
+&nbsp; -> Espacio de no separación. Se utiliza para crear un espacio en blanco que impide un salto de línea automático entre dos palabras o elementos.
+
+Ejercitación 3:
+
+3.a)
+
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a> -> Te envía al sitio web de Google directamente en la misma pestaña.
+
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a> -> Te envía al sitio web de Google redirigiendote a una nueva pestaña. Utiliza target="_blank" para ello.
+
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help"> -> No se muestra nada en el sitio web ya que no hay texto ni etiqueta de cierre, además hay un error de escritura en la URL.
+
+<a href="#">Click aquí para ir a Google</a> -> Apunta a la misma página, no lleva a otro sitio.
+
+<a href="#arriba">Click aquí para volver arriba</a> -> Es un ancla, lleva a una parte específica de la misma página.
+
+<a name="arriba" id="arriba"></a> -> Define un punto de destino dentro de la misma página, sirve como ancla para que la linea anterior funcione correctamente.
+
+3.b)
+
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p> -> Muestra una imagen y un link asociado a un texto, están separados y el link lleva a Google.
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p> -> Muestra un link asociado a una imagen y un texto, están separados y el link lleva a Google.
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p> -> Muestra un link asociado a una imagen y a un texto, están juntos y el link lleva a Google.
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p> -> Muestra un link asociado a una imagen y un link asociado a un texto, están separados pero ambos links llevan a Google.
+
+3.c)
+<ul>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ul>
+
+Muestra una lista desordenada de 3 elementos.
+--------------------------------------------------
+
+<ol>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ol>
+
+Muestra una lista ordenada de 3 elementos.
+--------------------------------------------------
+
+<ol>
+<li>xxx</li>
+</ol>
+<ol>
+<li value="2">yyy</li>
+</ol>
+<ol>
+<li
+value="3">zzz</li>
+</ol>
+
+Muestra una lista ordenada de 3 elementos separados por un salto de línea. "value" fuerza a que el elemento tenga esa numeración, por lo que yyy tendrá el número 2 y zzz tendrá el número 3 en la lista, independientemente de la posición en la que se ingresó.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<blockquote>
+<p>1. xxx<br />
+2. yyy<br />
+3. zzz</p>
+</blockquote>
+
+Muestra texto con saltos de línea, sin numeración automática y sin semántica de listas. Utiliza blockquote para indicar una cita en el bloque y genera una sangría automática.
+
+
+3.d)
+
+<table border="1" width="300">
+<tr>
+<th>Columna 1</th>
+<th>Columna 2</th>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+
+Muestra una tabla de 2 columnas y 3 filas, utiliza un encabezado.
+-------------------------------------------------------------------------------------------
+
+<table border="1" width="300">
+<tr>
+<td><div align="center"><strong>Colum
+na1</strong></div></td>
+<td><div align="center"><strong>Columna
+2</strong></div></td>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+
+Muestra una tabla de 2 columnas y 3 filas, pero no utiliza un encabezado, sino que crea manualmente la estética de un encabezado, alineándolo y poniendo el texto en negrita. Esto hace que el código no sea accesible, ni semánticamente correcto.
+
+3.e)
+
+<table width="200">
+<caption>
+Título
+</caption>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">
+&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+Muestra una tabla con un título y 6 casilleros con fondo gris. La tabla cuenta con 3 columnas y 2 filas.
+------------------------------------------------------------------------------------
+
+<table width="200">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+Muestra una tabla con un título y 6 casilleros con fondo gris. La tabla cuenta con 3 columnas y 3 filas. El título es una combinación de 3 columnas y un texto alineado en el centro. No es semánticamente correcto ya que simula un título con las celdas.
+
+3.f)
+<table width="200">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+Muestra una tabla de 3 columnas, la primer columna cuenta con una sola fila, mientras que la segunda y la tercera cuentan con 2 filas. Además del título, el cual es una combinación de 3 columnas.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<table width="200">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2"
+bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+Muestra una tabla de 2 filas, la primer fila cuenta con dos columnas, una de ellas es una combinación de 2 columnas. La segunda fila cuenta con 3 columnas. Además del título, el cual es una combinación de 3 columnas.
+
+3.g)
+
+<table width="200" border="1">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2"rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table>
+
+Muestra una tabla con 3 columnas y bordes separados. Une 2 columnas y 2 filas haciendo parecer que es 1 sola.
+----------------------------------------------------------------------------------------------------------------
+
+<table width="200" border="1" cellpadding="0"
+cellspacing="0">
+<tr>
+<td colspan="2"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table>
+
+Muestra una tabla de 2 columnas con bordes pegados como si fuesen lineas (cellspacing ="0") y eliminando espacios en blanco entre las celdas de la tabla (cellspacing="0"). Además, une sólo 2 filas en lugar de 2 filas y 2 columnas como el caso anterior.
+
+3.h)
+
+<form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+</fieldset>
+<input type="submit" id="boton1" name="boton1" value="Enviar" />
+</form>
+
+Muestra un formulario que tiene un cuadro con borde y el título "LOGIN" en el borde. Además, ya le da valor escrito "xxx" a los campos de clave y usuario. La clave se ve como puntos.
+---------------------------------------------------------------------------------------
+
+<form id="form2" name="form2" action="" method="get" target="_blank">
+LOGIN<br />
+<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+<input type="submit" id="boton2" name="boton2" value="Enviar" />
+</form>
+
+Muestra un formulario sin bordes, LOGIN se muestra como texto y los campos usuario y clave se encuentran vacíos. La clave es visible. Utiliza la etiqueta <label> para que, al hacer clic en el texto, se activa el cuadro de texto. Utiliza el método get en lugar de post.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="p
+ost" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu3" name="usu3" /><br />
+Clave: <input type="password" id="clave3" name="clave3" />
+</fieldset>
+<input type="reset" id="boton3" name="boton3" value=
+"Enviar" />
+</form>
+
+Muestra un formulario que tiene un cuadro con borde y el título "LOGIN" en el borde. Los campos clave y usuario se encuentran vacíos. La clave no es visible, se ve como puntos.
+
+3.i)
+
+<label>Botón 1
+<button type="button" name="boton1" id="boton1">
+<img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+<b>CLICK AQUÍ</b></button></label>
+
+Muestra un texto seguido de un botón con una imagen. Utiliza la etiqueta <button> con una imagen y un salto de línea, luego un texto en negrita dentro del botón.
+------------------------------------------------------------------------------------
+
+<label>Botón 2
+<input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+</label>
+
+Muestra un texto seguido de un botón sin imagen. Utiliza un input de tipo button, utiliza value para mostrar un texto dentro del botón.
+
+3.j)
+
+<p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p>
+
+Muestra dos opciones,ambas con el mismo nombre. Sólo se puede seleccionar 1 a la vez y se envía un sólo valor.
+-----------------------------------------------------------------------------------------------------------------
+
+<p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p>
+
+Muestra dos opciones, cada una con distinto nombre. Se pueden seleccionar todas y se pueden enviar 2 valores.
+
+3.k)
+
+<select name="lista">
+<optgroup label="Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label="Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+
+En este caso se muestra una lista desplegable y sólo se puede elegir un mes de un caso. Se envía un solo valor.
+----------------------------------------------------------------------------------------------------------------
+
+<select name="lista[]" multiple="multiple">
+<optgroup label=" Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label=" Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+
+En este caso se muestra un cuadro con varias opciones y una barra para desplazarse. Se pueden elegir varios meses (multiple) y se enviarán los valores elegidos en un arreglo (utiliza lista[]).
+
+ 
