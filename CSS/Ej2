@@ -63,7 +63,7 @@ border-style: solid;
 border-color: blue;
 border-width: 2px;
 } /* Efecto: Los elementos con id "destacado" tendrán un borde de tipo sólido y color azul, además tendrá un ancho de 2 px. */
-#distinto {
+#distinto { /* Es un selector que aplica estilos a cualquier elemento que tenga el atributo id en "distinto" */
 background-color: #9EC7EB;
 color: red;
 } /* Efecto: Los elementos con id "distinto" tendrán un fondo azul claro y el texto se mostrará de color rojo. */
