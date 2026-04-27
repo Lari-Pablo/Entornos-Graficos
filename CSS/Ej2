@@ -1,0 +1,126 @@
+p#normal { /* Es un selector que aplica estilos especificos al párrafo que tenga el atributo id en "normal" */
+font-family: arial,helvetica;
+font-size: 11px;
+font-weight: bold;
+} /* Efecto: El texto del párrafo con id "normal" se mostrará en negrita, fuente tipo arial o helvetica y con un tamaño de fuente de 11 px. */
+*#destacado { /* Es un selector que aplica estilos a cualquier elemento que tenga el atributo id en "destacado" */
+border-style: solid;
+border-color: blue;
+border-width: 2px;
+} /* Efecto: Los elementos con id "destacado" tendrán un borde de tipo sólido y color azul, además tendrá un ancho de 2 px. */
+#distinto {
+background-color: #9EC7EB;
+color: red;
+} /* Efecto: Los elementos con id "distinto" tendrán un fondo azul claro y el texto se mostrará de color rojo. */
+
+<p id="normal">Este es un párrafo</p>
+<p id="destacado">Este es otro párrafo</p>
+<table id="destacado"><tr><td>Esta es una tabla</td></tr></table>
+<p id="distinto">Este es el último párrafo</p>
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+p.quitar { /* Es un selector que aplica estilos a los párrafos que tengan asignada la clase en "quitar". */
+color: red;
+} /* Efecto: Los párrafos con esta clase se mostrarán en rojo.*/
+*.desarrollo { /* Es un selector que aplica estilos a los elementos que tengan asignada la clase en "desarrollo". Utiliza un selector universal "*".*/
+font-size: 8px;
+} /* Efecto: Los elementos de esta clase tendrán un tamaño de fuente de 8px.*/
+.importante { /* Es un selector que aplica estilos a los elementos que tengan asignada la clase en "importante".*/
+font-size: 20px;
+} /* Efecto: Los elementos de esta clase tendrán un tamaño de fuente de 20px.*/
+<p class="desarrollo">
+En este primer párrafo trataremos lo siguiente:
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p class="quitar">
+Este párrafo debe ser quitado de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p >
+En este otro párrafo trataremos otro tema:<br />
+xxxxxxxxxxxxxxxxxxxxxxxxx
+</p> /* En este párrafo no se aplicará ningún efecto ya que no tiene ninguna clase asignada.*/
+<p class="importante">
+Y este es el párrafo más importante de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</ p>
+<h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1> /* Este texto no cambia a color rojo ya que el selector solo funciona con párrafos y esto es un título.*/
+<p class="quitar importante">Se pueden aplicar varias clases a la vez</p> /* En esta línea se aplican dos clases, por lo que se aplicarán dos efectos: el texto se mostrará en rojo y con un tamaño de fuente de 20px.*/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/* Ejercicio 5 */
+
+h1,h2,h3,h4,h5,h6 {
+    color: red;
+}
+
+div p [href] {
+  color: black;
+}
+
+#ultimo ul {
+    color: yellow;
+}
+
+#ultimo ul a {
+    color: blue;
+}
+
+.importante {
+    color: green;
+}
+
+h1 .importante, h2 .importante, h3 .importante, h4 .importante, h5 .importante, h6 .importante {
+    color: red;
+}
+
+h1 [title]{
+    color: blue;
+}
+
+ol a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+ol a:visited {
+  color: violet;
+  text-decoration: none;
+}
+-----------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REChtml401-19991224/loose.dtd">
+<HTML lang=es xmlns="http://www.w3.org/1999/xhtml">
+<HEAD><TITLE>Página Principal</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"></META>
+<link rel="stylesheet" href="estilo2.css">
+</HEAD>
+<BODY>
+<DIV id=encabezado><H1>ASIGNATURA ELECTIVA</H1></DIV>
+<DIV id=contenido>
+<H2>Contenido</H2>
+<p>En esta asignatura ...........................<BR></p>
+<P>El objetivo fundamental ..................</P>
+<P>etc., etc., ...........................................</P>
+<P>etc., etc., ...........................................</P>
+<P>Adem&aacute;s, ...........................................</P>
+<P>etc., etc., ...........................................</P>
+<P class="resaltado">Pero, lo más importante es ..............................</P>
+<P class="resaltado">etc., etc., ...........................................</P>
+<P>Y, entonces, podemos continuar con ..................</P>
+<P>etc., etc., ...........................................</P>
+<P>&nbsp;</P>
+</DIV>
+<DIV id="menu">
+<H3>Enlaces</H3>
+<UL class="vineta">
+<LI><A href="http://www.e-style.com.ar/moodle" target=_blank>Curso Actual</A>
+<LI><A href="http://www.e-style.com.ar/logica" target=_blank>Curso anterior</A> </LI>
+<LI><A href="http://www.e-style.com.ar/ntedu/consultas.htm" target=_blank>Contacto</A></LI>
+</UL>
+</DIV>
+<DIV id="pie" class="etilopie">Ingeniería en Sistemas de Información - Universidad Tecnológica Nacional Rosario</DIV>
+<p>&nbsp;</p>
+</BODY>
+</HTML>
