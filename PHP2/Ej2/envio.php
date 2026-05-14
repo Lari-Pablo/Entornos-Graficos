@@ -13,6 +13,5 @@ Enviado: $fecha a las $hora\n
 \n";
 
 mail($destinatario,$asunto,$consulta,$desde);
-echo "Su consulta ha sido enviada, en breve recibirá nuestra
-respuesta.";
+echo "Su consulta ha sido enviada, en breve recibirá nuestra respuesta.";
 ?>
