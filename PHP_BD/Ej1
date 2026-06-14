@@ -1,5 +1,5 @@
 <!--
-Ej1) completar
+Ej 1) completar
 
 Consulta a una base de datos: Para comenzar la comunicación con un servidor de base de datos MySQL, es
 necesario abrir una conexión a ese servidor. Para inicializar esta conexión, PHP ofrece la función
