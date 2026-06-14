@@ -1,4 +1,5 @@
 <?php
+//Ejercicio 2 de la práctica.
 if(isset($_COOKIE["contador"])){
     $acum = $_COOKIE["contador"] + 1;
     setcookie("contador", $acum, time() + (60 * 60 * 24 * 30));
