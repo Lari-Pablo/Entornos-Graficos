@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario Alta Ciudades</title>
+    </head>
+    <body>
+        <form action="alta.php" method="POST" name="FormAlta">
+            <table width="225">
+                <tr>
+                    <td>Ciudad:</td>
+                    <td><input type="text" name="Ciudad" size="20" maxlength="40"></td>
+                </tr>
+                <tr>
+                    <td>País:</td>
+                    <td><input type="text" name="Pais" size="20" maxlength="40"></td>
+                </tr>
+                <tr>
+                    <td>Habitantes:</td>
+                    <td><input type="number" name="Habitantes" size="20" maxlength="40"></td>
+                </tr>
+                <tr>
+                    <td>Superficie:</td>
+                    <td><input type="number" name="Superficie" size="20" maxlength="40"></td>
+                </tr>
+                <tr>
+                    <td>Ingrese 0 si la ciudad ingresada no tiene metro, o 1 si lo tiene:</td>
+                    <td><input type="text" name="Metro" size="20" maxlength="1" pattern ="[01]" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" name="Submit" value="Agregar">
+                        <p><a href="menu_principal.html">Volver al menú del ABML</a></p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+</body>
+</html>
