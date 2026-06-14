@@ -1,4 +1,5 @@
 <?php
+//Ejercicio 3 de la práctica
 if(isset($_POST["usuario"])){
     $usuario = $_POST["usuario"];
     setcookie("usuario", $usuario, time() + (60 * 60 * 24 * 90));
